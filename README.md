@@ -10,6 +10,8 @@ This template helps you easily start development with Foundry. Follow the steps 
 
 3. **Node.js** - [Download](https://nodejs.org/en/download/package-manager)
 
+4. **Yarn**(Optional) - [Download](https://classic.yarnpkg.com/lang/en/docs/install)
+
 ## Installation
 
 1. Fork or clone the project
@@ -18,12 +20,14 @@ This template helps you easily start development with Foundry. Follow the steps 
 git clone https://github.com/{{username}}/foundry-template.git
 ```
 
-2.Navigate to the project directory and install dependencies
+
+2. Navigate to the project directory and install dependencies
 
 ```sh
 cd foundry-template
 forge install
 ```
+
 
 3. Create a `.env` file in the root project directory and populate the following variables (refer to `.env.example` for reference)
 
@@ -38,12 +42,13 @@ SEPOLIA_RPC_URL=YOUR_RPC_URL
 ETHERSCAN_API_KEY=YOUR_ETHERSCAN_API_KEY
 ```
 
+
 ## Deployment
 
 - **Deploy your contract on a local blockchain**
 
 ```sh
-yarn run deploy:local
+ run deploy:local
 ```
 
 _Note: Note: Ensure your local blockchain is running. If not, you can start it by running **anvil** in your terminal:_
@@ -52,14 +57,16 @@ _Note: Note: Ensure your local blockchain is running. If not, you can start it b
 anvil
 ```
 
+
 - **Deploy and verify your contract on the Sepolia Network**
 
 ```sh
-yarn run deploy:sepolia
+npm run deploy:sepolia
 ```
+
 
 - **Deploy and verify your contract on the Mainnet Network**
 
 ```sh
-yarn deploy:mainnet
+npm deploy:mainnet
 ```
