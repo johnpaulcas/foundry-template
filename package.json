@@ -10,7 +10,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "deploy:local": "source ./.env && forge script script/DeploySampleToken.t.sol:DeploySampleToken --fork-url http://localhost:8545 --broadcast -vvvv",
-    "deploy:sepolia": "source ./.env && forge script script/DeploySampleToken.t.sol:DeploySampleToken --chain sepolia --rpc-url $SEPOLIA_RPC_URL  --broadcast --verify -vvvv"
+    "deploy:sepolia": "source ./.env && forge script script/DeploySampleToken.t.sol:DeploySampleToken --chain sepolia --rpc-url $SEPOLIA_RPC_URL  --broadcast --verify -vvvv",
+    "deploy:mainnet": "source ./.env && forge script script/DeploySampleToken.t.sol:DeploySampleToken --chain mainnet --rpc-url $MAINNET_RPC_URL  --broadcast --verify -vvvv"
   },
   "author": "johnpaulcas",
   "license": "ISC"
