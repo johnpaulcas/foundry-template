@@ -10,7 +10,9 @@ This template helps you easily start development with Foundry. Follow the steps 
 
 3. **Node.js** - [Download](https://nodejs.org/en/download/package-manager)
 
-4. **Yarn**(Optional) - [Download](https://classic.yarnpkg.com/lang/en/docs/install)
+**Optional**
+
+1. **Yarn** - [Download](https://classic.yarnpkg.com/lang/en/docs/install)
 
 ## Installation
 
