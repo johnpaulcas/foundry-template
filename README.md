@@ -50,7 +50,7 @@ ETHERSCAN_API_KEY=YOUR_ETHERSCAN_API_KEY
 - **Deploy your contract on a local blockchain**
 
 ```sh
- run deploy:local
+npm run deploy:local
 ```
 
 _Note: Note: Ensure your local blockchain is running. If not, you can start it by running **anvil** in your terminal:_
