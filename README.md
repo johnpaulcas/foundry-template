@@ -1,66 +1,65 @@
-## Foundry
+# Foundry Template
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+This template helps you easily start development with Foundry. Follow the steps below for installation and deployment.
 
-Foundry consists of:
+## Prerequisites
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+1. **Git** - [Download](https://git-scm.com/downloads)
 
-## Documentation
+2. **Foundry (Forge, Anvil, Cast)** - [Download](https://book.getfoundry.sh/getting-started/installation) (make sure to run foundryup at least once)
 
-https://book.getfoundry.sh/
+3. **Node.js** - [Download](https://nodejs.org/en/download/package-manager)
 
-## Usage
+## Installation
 
-### Build
+1. Fork or clone the project
 
-```shell
-$ forge build
+```sh
+git clone https://github.com/{{username}}/foundry-template.git
 ```
 
-### Test
+2.Navigate to the project directory and install dependencies
 
-```shell
-$ forge test
+```sh
+cd foundry-template
+forge install
 ```
 
-### Format
+3. Create a `.env` file in the root project directory and populate the following variables (refer to `.env.example` for reference)
 
-```shell
-$ forge fmt
+```sh
+# Replace with your private key
+PRIVATE_KEY=0xYOUR_PRIVATE_KEY
+
+# Replace with your Alchemy (https://www.alchemy.com/) or Infura key (https://infura.io/)
+SEPOLIA_RPC_URL=YOUR_RPC_URL
+
+# Replace with your Etherscan key (https://etherscan.io/)
+ETHERSCAN_API_KEY=YOUR_ETHERSCAN_API_KEY
 ```
 
-### Gas Snapshots
+## Deployment
 
-```shell
-$ forge snapshot
+- **Deploy your contract on a local blockchain**
+
+```sh
+yarn run deploy:local
 ```
 
-### Anvil
+_Note: Note: Ensure your local blockchain is running. If not, you can start it by running **anvil** in your terminal:_
 
-```shell
-$ anvil
+```sh
+anvil
 ```
 
-### Deploy
+- **Deploy and verify your contract on the Sepolia Network**
 
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
+```sh
+yarn run deploy:sepolia
 ```
 
-### Cast
+- **Deploy and verify your contract on the Mainnet Network**
 
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
+```sh
+yarn deploy:mainnet
 ```
